@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+int numsum(int);
+int main()
+{
+    int num;
+    printf("Input number:");
+    scanf("%d",&num);
+    printf("Sum of digits: %d",numsum(num));
+    return 0;
+}
+int numsum(int n){
+int p=n;
+if(p==0)
+return 0;
+else{
+ return ((p%10)+numsum(p/10));
+ }
+
+}
